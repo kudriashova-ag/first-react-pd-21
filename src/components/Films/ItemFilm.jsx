@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import EditFilm from './EditFilm';
 
 const ItemFilm = ({
   id,
@@ -25,7 +26,10 @@ const ItemFilm = ({
       </button>
       {showDetails && <div>{description}</div>}
 
-      <button onClick={()=>removeHandler(id)}>Delete</button>
+      <button onClick={() => removeHandler(id)}>Delete</button>
+
+      <EditFilm film={{ id, name, image, description, year, director }} />
+      
     </div>
   );
 };

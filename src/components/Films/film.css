@@ -9,3 +9,8 @@
   height: 300px;
   object-fit: cover;
 }
+
+.error{
+  color: red;
+  font-size: 0.8em;
+}

@@ -15,12 +15,13 @@ const ListFilms = () => {
 
   const addFilm = (film) => { 
     const newFilms = [...filmsList, film];
+    console.log(newFilms);
     setFilmsList(newFilms);
   }
 
   return (
     <div>
-      <AddFilm />
+      <AddFilm addFilm={addFilm} />
 
       <div className="films-list">
         {filmsList.map((film) => (
