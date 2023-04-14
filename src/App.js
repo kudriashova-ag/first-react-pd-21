@@ -1,25 +1,13 @@
-import logo from './logo.svg';
-import './App.css';
+import ListFilms from "./components/Films/ListFilms";
+import Profile from "./components/Profile";
+import persons from "./data/persons";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  return <div>
+    {/* {persons.map(p => <Profile person={ p.person } size={p.size} />) } */}
+    {/* {persons.map(p => <Profile {...p} key={p.id} />) } */}
+    <ListFilms />
+  </div>
 }
 
 export default App;

@@ -1,0 +1,11 @@
+.films-list{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.films-list img{
+  max-width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
