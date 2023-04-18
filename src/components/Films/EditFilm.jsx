@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Button, Form, Input, Modal } from "antd";
 
-const EditFilm = ({ film }) => {
+const EditFilm = ({ film, updateHandler }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const showModal = () => {
     setIsModalOpen(true);
@@ -13,8 +13,12 @@ const EditFilm = ({ film }) => {
     setIsModalOpen(false);
   };
 
-  const submitHandler = (value) => {
-    console.log(value);
+  const submitHandler = (values) => {
+    // console.log(values);
+    // edit list films
+    updateHandler({ ...values, id: film.id });
+    // close modal
+    handleCancel();
   };
 
   return (
@@ -53,11 +57,11 @@ const EditFilm = ({ film }) => {
             <Input />
           </Form.Item>
 
-          <Form.Item wrapperCol={{offset: 6}}>
-            <Button type="primary" htmlType="submit">Save</Button>
+          <Form.Item wrapperCol={{ offset: 6 }}>
+            <Button type="primary" htmlType="submit">
+              Save
+            </Button>
           </Form.Item>
-
-
         </Form>
       </Modal>
     </div>

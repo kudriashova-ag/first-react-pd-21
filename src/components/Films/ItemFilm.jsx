@@ -9,6 +9,7 @@ const ItemFilm = ({
   year,
   director,
   removeHandler,
+  updateHandler
 }) => {
   let [showDetails, setShowDetails] = useState(false);
 
@@ -28,8 +29,10 @@ const ItemFilm = ({
 
       <button onClick={() => removeHandler(id)}>Delete</button>
 
-      <EditFilm film={{ id, name, image, description, year, director }} />
-      
+      <EditFilm
+        film={{ id, name, image, description, year, director }}
+        updateHandler={updateHandler}
+      />
     </div>
   );
 };
